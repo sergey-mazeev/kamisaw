@@ -874,6 +874,31 @@ b, strong {
       grid-row: 7/10;
     }
   }
+
+  &_reverse {
+
+    .goods-list__item {
+      &:nth-child(1) {
+        grid-column: 2/3;
+        grid-row: 1/4;
+      }
+
+      &:nth-child(2) {
+        grid-column: 1/2;
+        grid-row: 2/7;
+      }
+
+      &:nth-child(3) {
+        grid-column: 2/3;
+        grid-row: 5/8;
+      }
+
+      &:nth-child(4) {
+        grid-column: 1/2;
+        grid-row: 7/10;
+      }
+    }
+  }
 }
 
 .goods-list-item {
