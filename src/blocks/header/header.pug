@@ -1,0 +1,16 @@
+mixin header
+    header.header
+        .container
+            a.header__logo(href="/"): img(src="/img/kamisaw.svg", alt="KAMI saw логотип", width="172" height="35")
+            .header__content-wrapper
+                nav.header__menu
+                    ul
+                        li: a(href="#forest") Лесопиление
+                        li: a(href="#goods") Мебельное производство
+                        li: a(href="#service") Сервис и доставка
+                        li: a(href="#about") О компании
+                        li: a(href="#footer") Контакты
+                .header__mail: a(href="mailto:kamisaw@info.ru" target="_blank") kamisaw@info.ru
+            .header__right
+                a.header__phone(href="tel:88000000000") 8 (800) 000 00-00
+                button.header__burger(type="button") Открыть меню
