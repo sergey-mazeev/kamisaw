@@ -134,9 +134,8 @@ b, strong {
 }
 
 .questions-block {
-  background-image: url(../img/bg_question.jpg);
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 100%;
   background-color: #DEDEDE;
   border-radius: 1.25em;
   padding-top: 50/16+em;
@@ -144,18 +143,75 @@ b, strong {
   padding-left: 56%;
   padding-right: 100/16+em;
   position: relative;
+  overflow: hidden;
+
+  @media screen and (min-width: 415px) {
+    background-image: url(../img/bg_question.jpg);
+  }
+
+  @media screen and (max-width: 1250px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 1070px) {
+    padding-right: 80/16+em;
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding-left: 400px;
+    padding-top: 2.5em;
+    padding-bottom: 2.75em;
+  }
+  @media screen and (max-width: 920px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+  }
+  @media screen and (max-width: 730px) {
+    padding-bottom: 36px;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding-top: 36px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 320px;
+  }
+
+  @media screen and (max-width: 414px) {
+    background-image: url(../img/bg_question-mobile.jpg);
+    padding-bottom: 260px;
+  }
 
   &__title {
     font-weight: 800;
     font-size: 1.5em;
     text-transform: uppercase;
     margin-bottom: .4em;
+
+    @media screen and (max-width: 550px) {
+      font-weight: 900;
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
   }
 
   &__subtitle {
     font-weight: 500;
     font-size: 1.125em;
     margin-bottom: 40/18+em;
+
+    @media screen and (max-width: 550px) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__btn {
+    font-size: 16px;
+    @media screen and (max-width: 414px) {
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   &::before {
@@ -170,7 +226,37 @@ b, strong {
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: contain;
-    background-image: url(../img/img_question.png);
+
+    @media screen and (min-width: 731px) {
+      background-image: url(../img/img_question.png);
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 380px;
+    }
+
+    @media screen and (max-width: 920px) {
+      height: 180px;
+      transform: scaleX(-1);
+      left: auto;
+      right: 0;
+    }
+
+    @media screen and (max-width: 730px) {
+      content: none;
+    }
+    @media screen and (max-width: 550px) and (min-width: 415px) {
+      content: '';
+      background-image: url(../img/img_question.png);
+      width: 620px;
+      height: 320px;
+      transform: none;
+      right: auto;
+      left: 0;
+    }
+    @media screen and (max-width: 414px) {
+      content: none;
+    }
   }
 }
 
@@ -1155,6 +1241,10 @@ b, strong {
   background-repeat: no-repeat;
   background-size: 100% auto;
   margin-bottom: 38/16+em;
+
+  @media screen and (max-width: 550px) {
+    background-position: 50% 135px;
+  }
 
   .container {
     @media screen and (max-width: 1070px) {

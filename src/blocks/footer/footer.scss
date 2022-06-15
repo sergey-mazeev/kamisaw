@@ -11,9 +11,27 @@
     padding-top: 212/16+em;
     padding-bottom: 86/16+em;
 
+    @media screen and (max-width: 1380px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 650px) {
+      padding-top: 8.25em;
+    }
+    @media screen and (max-width: 550px) {
+      margin-top: -370px;
+      padding-top: 390px;
+    }
+    @media screen and (max-width: 414px) {
+      margin-top: -330px;
+      padding-top: 350px;
+    }
+
     .container {
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 1100px) {
+        flex-wrap: wrap;
+      }
     }
   }
 
@@ -22,19 +40,39 @@
     padding-bottom: 2.25em;
     background-color: #383838;
     color: #ffffff;
+
+    @media screen and (max-width: 950px) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: 14px;
+    }
+
     .container {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
+
+      @media screen and (max-width: 950px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
+
     p {
       margin: 0 120px 0 0;
       padding: 0;
       max-width: 960px;
+      @media screen and (max-width: 950px) {
+        margin: auto auto 20px;
+      }
     }
+
     a {
       color: $color_accent;
     }
+
     span {
       flex-shrink: 0;
     }
@@ -44,10 +82,33 @@
 
     &_1 {
       width: 30%;
+      @media screen and (max-width: 1100px) {
+        width: calc(50% - 25px);
+        margin-bottom: 40px;
+      }
+      @media screen and (max-width: 650px) {
+        width: 100%;
+      }
     }
 
     width: calc(70% / 3 - 70px);
     flex-shrink: 0;
+
+    @media screen and (max-width: 1380px) {
+      width: calc(70% / 3 - 14px);
+    }
+
+    @media screen and (max-width: 1100px) {
+      width: calc(50% - 25px);
+    }
+
+    @media screen and (max-width: 650px) {
+      width: 100%;
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
 
     &-title {
@@ -80,6 +141,16 @@
 
       &_logo {
         margin-top: -.5em;
+
+        @media screen and (max-width: 650px) {
+          padding-top: 30px;
+          margin-top: 0;
+          &::before,
+          &::after {
+            top: 0;
+            bottom: auto;
+          }
+        }
       }
     }
 
@@ -96,6 +167,7 @@
       padding: 0;
       margin: 0;
     }
+
     a {
       color: inherit;
 
@@ -113,6 +185,7 @@
     margin-bottom: .35em;
   }
 
+  &__address,
   &__mail,
   &__phone {
     a {
