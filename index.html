@@ -15,7 +15,7 @@
     <!-- - vendorScripts.push(['js/vendor/imask.js', 'defer']);--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="css/main.css?1655286267170" rel="stylesheet">
+    <link href="css/main.css?1655295238025" rel="stylesheet">
     <title>KAMI saw</title>
   </head>
   <body class="front">
@@ -44,7 +44,7 @@
           <h1><b>Дисковые пилы</b> для производств</h1>
           <div class="title-block__supply">
             <div class="title-block__supply-sale"><img src="img/img-front-title.png" alt="10% скидка на подрезные пилы КАМИ"><span>Скидка 10%</span></div>
-            <div class="title-block__supply-text">На подрезную пилу <br>при покупке комплекта</div><a class="title-block__supply-btn btn btn_main btn_accent-2" href="#">Подробнее</a>
+            <div class="title-block__supply-text">На подрезную пилу <br>при покупке комплекта</div><a class="title-block__supply-btn btn btn_main btn_accent-2 temp-open-modal" href="#question">Подробнее</a>
           </div>
         </div>
       </div>
@@ -87,11 +87,11 @@
             <div class="card-list">
               <div class="card-list__item card-list__item_large">
                 <div class="card-list__item-name">Для деревообработки</div>
-                <div class="card-list__item-price">Цены от <b>000 000 ₽</b></div><a class="card-list__item-btn btn btn_main btn_accent-2" href="#">Заказать подбор</a>
+                <div class="card-list__item-price">Цены от <b>000 000 ₽</b></div><a class="card-list__item-btn btn btn_main btn_accent-2 temp-open-modal" href="#selection">Заказать подбор</a>
               </div>
               <div class="card-list__item">
                 <div class="card-list__item-name">Для мебельных производств</div>
-                <div class="card-list__item-price">Цены от <b>000 000 ₽</b></div><a class="card-list__item-btn btn btn_main btn_accent-2" href="#">Заказать подбор</a>
+                <div class="card-list__item-price">Цены от <b>000 000 ₽</b></div><a class="card-list__item-btn btn btn_main btn_accent-2 temp-open-modal" href="#selection">Заказать подбор</a>
               </div>
             </div>
           </div>
@@ -132,7 +132,7 @@
                 <ul class="about-goods__sum-list">
                   <li><img width="29px" height="29px" src="data:image/png;base64,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"> Доставка от <b>1 дня</b></li>
                   <li><img width="24px" height="24px" src="data:image/png;base64,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"> <b>В наличии</b></li>
-                </ul><a class="about-goods__btn btn btn_main btn_accent-2" href="#">Заказать пилу</a>
+                </ul><a class="about-goods__btn btn btn_main btn_accent-2 temp-open-modal" href="#order">Заказать пилу</a>
                 <div class="about-goods__list-wrapper">
                   <button class="about-goods__btn-expand btn btn_main btn_icon btn_icon-expand" type="button">Преимущества</button>
                   <div class="about-goods__list-mobile"></div>
@@ -166,7 +166,7 @@
                           <li><span>Цена от</span> <span><b>690 ₽</b></span> <img src="img/flag1.png"></li>
                           <li><span>Цена от</span> <span><b>590 ₽</b></span> <img src="img/flag2.png"></li>
                         </ul>
-                      </div><a class="goods-list-item__btn btn btn_main" href="#">Заказать пилу</a>
+                      </div><a class="goods-list-item__btn btn btn_main temp-open-modal" href="#order">Заказать пилу</a>
                     </div>
                   </li>
                   <li class="goods-list__item goods-list-item">
@@ -179,7 +179,7 @@
                           <li><span>Цена от</span> <span><b>690 ₽</b></span> <img src="img/flag1.png"></li>
                           <li><span>Цена от</span> <span><b>590 ₽</b></span> <img src="img/flag2.png"></li>
                         </ul>
-                      </div><a class="goods-list-item__btn btn btn_main" href="#">Заказать пилу</a>
+                      </div><a class="goods-list-item__btn btn btn_main temp-open-modal" href="#order">Заказать пилу</a>
                     </div>
                   </li>
                   <li class="goods-list__item goods-list-item goods-list-item_img-right">
@@ -193,7 +193,7 @@
                           <li><span>Размер</span> <span>300 мм</span></li>
                           <li><span>Цена от</span> <span><b>790 ₽</b></span></li>
                         </ul>
-                      </div><a class="goods-list-item__btn btn btn_main" href="#">Заказать пилу</a>
+                      </div><a class="goods-list-item__btn btn btn_main temp-open-modal" href="#order">Заказать пилу</a>
                     </div>
                   </li>
                   <li class="goods-list__item goods-list-item">
@@ -207,7 +207,7 @@
                           <li><span>Размер</span> <span>300 мм</span></li>
                           <li><span>Цена от</span> <span><b>790 ₽</b></span></li>
                         </ul>
-                      </div><a class="goods-list-item__btn btn btn_main" href="#">Заказать пилу</a>
+                      </div><a class="goods-list-item__btn btn btn_main temp-open-modal" href="#order">Заказать пилу</a>
                     </div>
                   </li>
                 </ul>
@@ -233,7 +233,7 @@
                           <li><span>Цена от</span> <span><b>690 ₽</b></span> <img src="img/flag1.png"></li>
                           <li><span>Цена от</span> <span><b>590 ₽</b></span> <img src="img/flag2.png"></li>
                         </ul>
-                      </div><a class="goods-list-item__btn btn btn_main btn_accent-2" href="#">Заказать пилу</a>
+                      </div><a class="goods-list-item__btn btn btn_main btn_accent-2 temp-open-modal" href="#order">Заказать пилу</a>
                     </div>
                   </li>
                   <li class="goods-list__item goods-list-item goods-list-item_img-right">
@@ -246,7 +246,7 @@
                           <li><span>Цена от</span> <span><b>690 ₽</b></span> <img src="img/flag1.png"></li>
                           <li><span>Цена от</span> <span><b>590 ₽</b></span> <img src="img/flag2.png"></li>
                         </ul>
-                      </div><a class="goods-list-item__btn btn btn_main btn_accent-2" href="#">Заказать пилу</a>
+                      </div><a class="goods-list-item__btn btn btn_main btn_accent-2 temp-open-modal" href="#order">Заказать пилу</a>
                     </div>
                   </li>
                   <li class="goods-list__item goods-list-item">
@@ -260,7 +260,7 @@
                           <li><span>Размер</span> <span>300 мм</span></li>
                           <li><span>Цена от</span> <span><b>790 ₽</b></span></li>
                         </ul>
-                      </div><a class="goods-list-item__btn btn btn_main btn_accent-2" href="#">Заказать пилу</a>
+                      </div><a class="goods-list-item__btn btn btn_main btn_accent-2 temp-open-modal" href="#order">Заказать пилу</a>
                     </div>
                   </li>
                   <li class="goods-list__item goods-list-item goods-list-item_img-right">
@@ -274,7 +274,7 @@
                           <li><span>Размер</span> <span>300 мм</span></li>
                           <li><span>Цена от</span> <span><b>790 ₽</b></span></li>
                         </ul>
-                      </div><a class="goods-list-item__btn btn btn_main btn_accent-2" href="#">Заказать пилу</a>
+                      </div><a class="goods-list-item__btn btn btn_main btn_accent-2 temp-open-modal" href="#order">Заказать пилу</a>
                     </div>
                   </li>
                 </ul>
@@ -333,7 +333,7 @@
       <div class="container">
         <div class="footer__questions questions-block">
           <div class="questions-block__title">Остались вопросы или нужна помощь специалиста?</div>
-          <div class="questions-block__subtitle">Задай вопрос техническому специалисту</div><a class="questions-block__btn btn btn_main btn_icon btn_icon-chevron" href="#">Задать вопрос</a>
+          <div class="questions-block__subtitle">Задай вопрос техническому специалисту</div><a class="questions-block__btn btn btn_main btn_icon btn_icon-chevron temp-open-modal" href="#question">Задать вопрос</a>
         </div>
       </div>
       <div class="footer__body">
@@ -383,6 +383,127 @@
         </div>
       </div>
     </footer>
-    <script src="js/mainBundle.js?1655286267170" defer="defer"></script>
+    <template id="modalTemplate">
+      <section class="modal">
+        <div class="modal__body">
+          <div class="modal__header">
+            <div class="modal__title"></div>
+            <button class="modal__close" type="button"><span>Закрыть модальное окно</span></button>
+          </div>
+          <div class="modal__content"></div>
+        </div>
+      </section>
+    </template>
+    <section class="modal modal_wide" id="selection">
+      <div class="modal__body">
+        <div class="modal__header">
+          <div class="modal__title">Подбор пильного диска</div>
+          <button class="modal__close" type="button"><span>Закрыть модальное окно</span></button>
+        </div>
+        <div class="modal__content">
+          <form class="form form_modal form_selection" action="/ajax/" method="post" data-modal-title="Подбор пильного диска" data-success="gtag('event', 'Callback', { 'event_category': 'event'  });;ym(8743,'reachGoal','callback');">
+            <fieldset class="form__column">
+              <div class="form__item">
+                <input class="form__input" type="text" name="PROPERTY[NAME]" placeholder="Ваше имя *" autocomplete="off" required="required"/>
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="email" name="PROPERTY[EMAIL]" placeholder="E-mail"/>
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="tel" name="PROPERTY[PHONE]" placeholder="Телефон *" required="required"/>
+              </div>
+              <div class="form__item">
+                <textarea class="form__input" name="PROPERTY[QUESTION]" placeholder="Введите сообщение"></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="form__column">
+              <div class="form__item form__item_label">
+                <label class="form__label" for="inputTeeth">Кол-во зубьев</label>
+                <input class="form__input" id="inputTeeth" type="number" name="PROPERTY[TEETH]" placeholder="Кол-во зубьев"/>
+              </div>
+              <div class="form__item form__item_label">
+                <label class="form__label" for="inputRad"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAbCAYAAAB4Kn/lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJtSURBVHgBrVXtceIwEJUNBbiDcyo4UsGRDpwGwK7gSAWYCi4dGBj+h1SQUME5FZyvA+c3A+Q9s+vIjo2dGXbGllZaPT3th+SYK0mSJJ7ruk/H43ERRdHr0FxJABqjGaP10d4MO1jQ8OfpdBrpmOM4GVjtyErHVqsVQX/jyzF3V9i1AIYApOHowr4ZvhhAb7D9K2PhdDpdfQEGoA+jhEeSoRxsl2CZqg3ZQw/Q9WsbxQBdqDKsgb7IghzfTHevCcce5FSJDoJ5xdYtO5+gKYxuW0CNZe/X9BdmRgVYnE9DBuYegckugZItmrkwZbDoKn8wGMxLYLrANuoBSpf9ETVmdpAMFfh/JngF47EMbnuAeuIyD/aPGiyuo14Auu5U2nMHkV6aDsFRydTHR6CFPQf9WbqBMi5yFcf5fwmUccDi0EgRgGVeM9GULPAcLDixg2M5baBwwUiLQIK7bdn8nzkH0XdNh0iwnkSN20BFinTb7/fvBM6obDabH02WAurDDa92ZTUQ8BSYbnK1XA+HQ2C+Hi02Z58xWJG5LGP+SKAgBMBnGQhqDGbmG/kNv1ayi66gz3IMjAEWCCj9qlU065HfgRBjxuyKDZSdVBMn7uVyoV8fwzB86AC1L6/yhitTDP5coplaazIY3XSAjjS4+FLY3+pcmW5gSp9mqjOoWvcNgB4DW7sR72wbxzIOrHy1JZXnKJcNmSXly0J3sbzrlag+rviJlzYA5vJSeA2b8WVJ+YBOJpNdw/z5BVFQAG1hqEXAvI3W6/UvgPglE7BHir413BUV4V3B644PZ9YnX/uKC7DMfN5Ymbmm2G/VteQD4cBqWiTu3ugAAAAASUVORK5CYII=" width="21px"/></label>
+                <input class="form__input" id="inputRad" type="number" name="PROPERTY[RADIUS]" placeholder="Радиус"/>
+              </div>
+              <div class="form__item form__item_file">
+                <input id="inputFile" type="file" name="PROPERTY[FILE]"/>
+                <label for="inputFile">Загрузка файла</label>
+              </div>
+            </fieldset>
+            <div class="form__actions">
+              <button class="btn btn_main btn_accent-2" value="Заказать" type="submit">Отправить</button>
+              <div class="form__item form__item_checkbox">
+                <input id="inputSuggestion" type="checkbox" checked="checked" required="required"/>
+                <label for="inputSuggestion">Согласен на обработку <a href="https://www.stanki.ru/politika/" target="_blank">персональных данных</a></label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="modal" id="order">
+      <div class="modal__body">
+        <div class="modal__header">
+          <div class="modal__title modal__title_center">Заказать пильный диск</div>
+          <button class="modal__close" type="button"><span>Закрыть модальное окно</span></button>
+        </div>
+        <div class="modal__content">
+          <form class="form form_modal form_order" action="/ajax/" method="post" data-modal-title="Заказать пильный диск" data-success="gtag('event', 'Callback', { 'event_category': 'event'  });;ym(8743,'reachGoal','callback');">
+            <div class="form__item">
+              <input class="form__input" type="text" name="PROPERTY[NAME]" placeholder="Ваше имя *" autocomplete="off" required="required"/>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="email" name="PROPERTY[EMAIL]" placeholder="E-mail"/>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="tel" name="PROPERTY[PHONE]" placeholder="Телефон *" required="required"/>
+            </div>
+            <div class="form__item">
+              <textarea class="form__input" name="PROPERTY[QUESTION]" placeholder="Введите сообщение"></textarea>
+            </div>
+            <div class="form__item form__item_checkbox">
+              <input id="inputSuggestion" type="checkbox" checked="checked" required="required"/>
+              <label for="inputSuggestion">Согласен на обработку <a href="https://www.stanki.ru/politika/" target="_blank">персональных данных</a></label>
+            </div>
+            <div class="form__actions">
+              <button class="btn btn_main" value="Заказать" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="modal" id="question">
+      <div class="modal__body">
+        <div class="modal__header">
+          <div class="modal__title modal__title_center">Вопрос консультанту</div>
+          <button class="modal__close" type="button"><span>Закрыть модальное окно</span></button>
+        </div>
+        <div class="modal__content">
+          <form class="form form_modal form_order" action="/ajax/" method="post" data-modal-title="Вопрос консультанту" data-success="gtag('event', 'Callback', { 'event_category': 'event'  });;ym(8743,'reachGoal','callback');">
+            <div class="form__item">
+              <input class="form__input" type="text" name="PROPERTY[NAME]" placeholder="Ваше имя *" autocomplete="off" required="required"/>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="email" name="PROPERTY[EMAIL]" placeholder="E-mail"/>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="tel" name="PROPERTY[PHONE]" placeholder="Телефон *" required="required"/>
+            </div>
+            <div class="form__item">
+              <textarea class="form__input" name="PROPERTY[QUESTION]" placeholder="Введите сообщение"></textarea>
+            </div>
+            <div class="form__item form__item_checkbox">
+              <input id="inputSuggestion" type="checkbox" checked="checked" required="required"/>
+              <label for="inputSuggestion">Согласен на обработку <a href="https://www.stanki.ru/politika/" target="_blank">персональных данных</a></label>
+            </div>
+            <div class="form__actions">
+              <button class="btn btn_main" value="Заказать" type="submit">Задать вопрос</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="js/mainBundle.js?1655295238025" defer="defer"></script>
+    <script src="js/vendor/demo.js?1655295238025" defer="defer"></script>
   </body>
 </html>
