@@ -58,6 +58,46 @@ window.addEventListener('load', () => {
     bindBurger(document.querySelector('.header__burger'));
 
 
+    const copyElement = (selector, targetParent, mQuery) => {
+        const element = document.querySelector(selector);
+        const target = document.querySelector(targetParent);
+
+        if (!element || !target) {
+            return false;
+        }
+
+        const pasteClone = () => {
+            if (window.matchMedia(mQuery).matches && !target.innerHTML.trim(' ')) {
+                target.append(element.cloneNode(true))
+            }
+        };
+
+        pasteClone();
+
+        window.addEventListener('resize', pasteClone);
+
+    }
+
+    copyElement('.about-goods__list', '.about-goods__list-mobile', '(max-width: 1100px)');
+
+    const expandBlock = (triggerSelector, targetSelector) => {
+        const element = document.querySelector(triggerSelector);
+        const target = document.querySelector(targetSelector);
+
+        if (!element || !target) {
+            return false;
+        }
+
+        element.addEventListener('click', (e) => {
+            e.preventDefault();
+            element.classList.toggle('m-open');
+            target.classList.toggle('m-open');
+        })
+    }
+
+    expandBlock('.btn_icon-expand', '.about-goods__list-mobile');
+
+
 
     // инициализация кастомных модалок
     const on = (element, eventName, selector, fn) => {
