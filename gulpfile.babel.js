@@ -63,4 +63,6 @@ export const dev = series(build, parallel(watchFiles, serve, productionConsoleAl
 
 export const fav = faviconSimple;
 
+export const vd = vendor;
+
 export default dev;

@@ -4,7 +4,7 @@ mixin footer
             .footer__questions.questions-block
                 .questions-block__title Остались вопросы или нужна помощь специалиста?
                 .questions-block__subtitle Задай вопрос техническому специалисту
-                a.questions-block__btn.btn.btn_main.btn_icon.btn_icon-chevron(href="#") Задать вопрос
+                a.questions-block__btn.btn.btn_main.btn_icon.btn_icon-chevron.temp-open-modal(href="#question") Задать вопрос
         .footer__body
             .container
                 .footer__column.footer__column_1
@@ -39,3 +39,5 @@ mixin footer
             .container
                 p Вы принимаете условия <a href="https://www.stanki.ru/politika/" target="_blank">политики конфиденциальности</a> и <a href="https://www.stanki.ru/polzovatelskoe/" target="_blank">пользовательского соглашения</a> каждый раз, когда оставляете свои данные в любой форме обратной связи на сайте stanki.ru.
                 span © Copyright 2022. Все права защищены.
+
+    +modals

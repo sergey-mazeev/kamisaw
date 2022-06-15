@@ -1,6 +1,5 @@
 import {mmodal} from './modal';
 import {bindModalForm, bindForm} from "./bindForm";
-import {Breadcrumbs} from "./Breadcrumbs";
 import {PhoneMask} from "./PhoneMask";
 
 window.addEventListener('load', () => {
