@@ -40,6 +40,37 @@ mixin modals
                             input#inputSuggestion1(type="checkbox" checked="checked" required)
                             label(for="inputSuggestion1") Согласен на обработку <a href="https://www.stanki.ru/politika/" target="_blank">персональных данных</a>
 
+
+    section.modal.modal_sale#saleModal
+        .modal__body
+            .modal__header
+                .modal__title Получите дополнительную выгоду при покупке комплекта пил!
+                button.modal__close(type="button") <span>Закрыть модальное окно</span>
+            .modal__content
+                form.form.form_modal.form_sale(action="/ajax/" method="post" data-modal-title="Получите дополнительную выгоду при покупке комплекта пил!" data-success="gtag('event', 'Callback', { 'event_category': 'event'  });;ym(8743,'reachGoal','callback');")
+                    .form__item.form__item_img
+                        picture
+                            source(srcset="img/img_sale-mobile.jpg" media="(max-width: 550px)")
+                            img(src="img/img_sale.jpg", alt="Скидка 10% при покупке комплекта")
+                    fieldset.form__column
+                        .form__item
+                            input.form__input(type="text" name="PROPERTY[NAME]" placeholder="Ваше имя *" autocomplete="off" required)
+                        .form__item
+                            input.form__input(type="tel" name="PROPERTY[PHONE]" placeholder="Телефон *" required)
+                        .form__item
+                            input.form__input(type="email" name="PROPERTY[EMAIL]" placeholder="E-mail")
+                    fieldset.form__column
+                        .form__item
+                            textarea.form__input(name="PROPERTY[QUESTION]" placeholder="Введите сообщение")
+
+                    .form__actions
+                        button.btn.btn_main.btn_accent-2(value="Заказать" type="submit") Отправить
+                        .form__item.form__item_checkbox
+                            input#inputSuggestion5(type="checkbox" checked="checked" required)
+                            label(for="inputSuggestion5") Согласен на обработку <a href="https://www.stanki.ru/politika/" target="_blank">персональных данных</a>
+
+
+
     section.modal#order
         .modal__body
             .modal__header
