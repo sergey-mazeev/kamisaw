@@ -1270,13 +1270,13 @@ b, strong {
   &__head {
     display: flex;
     align-items: center;
-    margin-bottom: 14em;
+    margin-bottom: 8em;
     @media screen and (max-width: 1400px) {
       font-size: 14px;
     }
 
     @media screen and (max-width: 1280px) {
-      margin-bottom: 100px;
+      margin-bottom: 60px;
     }
     @media screen and (max-width: 1250px) {
       font-size: 12px;
