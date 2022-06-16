@@ -2080,8 +2080,11 @@ b, strong {
         transition: all .35s;
 
         &:hover {
-          color: #ffffff;
-          background-color: $color_accent;
+          background-color: darken(#f8f8f8, 5%);
+        }
+
+        &:active {
+          background-color: darken(#f8f8f8, 10%);
         }
 
         &::before {
@@ -2294,12 +2297,6 @@ b, strong {
   }
 
   &_selection {
-    display: flex;
-    flex-wrap: wrap;
-
-    @media screen and (max-width: 700px) {
-      display: block;
-    }
 
     textarea {
       height: 134px;
@@ -2329,7 +2326,7 @@ b, strong {
 
     .form__actions {
       width: 100%;
-      margin-top: 30px;
+      margin-top: 34px;
       align-items: center;
 
       @media screen and (max-width: 590px) {
@@ -2416,15 +2413,6 @@ b, strong {
 
       @media screen and (max-width: 700px) {
         display: none;
-      }
-    }
-
-    .form__item_file {
-      margin-top: 86px;
-
-      @media screen and (max-width: 700px) {
-        margin-top: 0;
-        width: 100%;
       }
     }
 

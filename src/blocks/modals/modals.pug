@@ -7,32 +7,24 @@ mixin modals
                     button.modal__close(type="button") <span>Закрыть модальное окно</span>
                 .modal__content
 
-    section.modal.modal_wide#selection
+    section.modal#selection
         .modal__body
             .modal__header
                 .modal__title Подбор пильного диска
                 button.modal__close(type="button") <span>Закрыть модальное окно</span>
             .modal__content
                 form.form.form_modal.form_selection(action="/ajax/" method="post" data-modal-title="Подбор пильного диска" data-success="gtag('event', 'Callback', { 'event_category': 'event'  });;ym(8743,'reachGoal','callback');")
-                    fieldset.form__column
-                        .form__item
-                            input.form__input(type="text" name="PROPERTY[NAME]" placeholder="Ваше имя *" autocomplete="off" required)
-                        .form__item
-                            input.form__input(type="email" name="PROPERTY[EMAIL]" placeholder="E-mail")
-                        .form__item
-                            input.form__input(type="tel" name="PROPERTY[PHONE]" placeholder="Телефон *" required)
-                        .form__item
-                            textarea.form__input(name="PROPERTY[QUESTION]" placeholder="Введите сообщение")
-                    fieldset.form__column
-                        .form__item.form__item_label
-                            label.form__label(for="inputTeeth") Кол-во зубьев
-                            input.form__input#inputTeeth(type="number" name="PROPERTY[TEETH]" placeholder="Кол-во зубьев")
-                        .form__item.form__item_label
-                            label.form__label(for="inputRad"): img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAbCAYAAAB4Kn/lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJtSURBVHgBrVXtceIwEJUNBbiDcyo4UsGRDpwGwK7gSAWYCi4dGBj+h1SQUME5FZyvA+c3A+Q9s+vIjo2dGXbGllZaPT3th+SYK0mSJJ7ruk/H43ERRdHr0FxJABqjGaP10d4MO1jQ8OfpdBrpmOM4GVjtyErHVqsVQX/jyzF3V9i1AIYApOHowr4ZvhhAb7D9K2PhdDpdfQEGoA+jhEeSoRxsl2CZqg3ZQw/Q9WsbxQBdqDKsgb7IghzfTHevCcce5FSJDoJ5xdYtO5+gKYxuW0CNZe/X9BdmRgVYnE9DBuYegckugZItmrkwZbDoKn8wGMxLYLrANuoBSpf9ETVmdpAMFfh/JngF47EMbnuAeuIyD/aPGiyuo14Auu5U2nMHkV6aDsFRydTHR6CFPQf9WbqBMi5yFcf5fwmUccDi0EgRgGVeM9GULPAcLDixg2M5baBwwUiLQIK7bdn8nzkH0XdNh0iwnkSN20BFinTb7/fvBM6obDabH02WAurDDa92ZTUQ8BSYbnK1XA+HQ2C+Hi02Z58xWJG5LGP+SKAgBMBnGQhqDGbmG/kNv1ayi66gz3IMjAEWCCj9qlU065HfgRBjxuyKDZSdVBMn7uVyoV8fwzB86AC1L6/yhitTDP5coplaazIY3XSAjjS4+FLY3+pcmW5gSp9mqjOoWvcNgB4DW7sR72wbxzIOrHy1JZXnKJcNmSXly0J3sbzrlag+rviJlzYA5vJSeA2b8WVJ+YBOJpNdw/z5BVFQAG1hqEXAvI3W6/UvgPglE7BHir413BUV4V3B644PZ9YnX/uKC7DMfN5Ymbmm2G/VteQD4cBqWiTu3ugAAAAASUVORK5CYII=" width="21px")
-                            input.form__input#inputRad(type="number" name="PROPERTY[RADIUS]" placeholder="Радиус")
-                        .form__item.form__item_file
-                            input#inputFile(type="file" name="PROPERTY[FILE]")
-                            label(for="inputFile") Загрузка файла
+                    .form__item
+                        input.form__input(type="text" name="PROPERTY[NAME]" placeholder="Ваше имя *" autocomplete="off" required)
+                    .form__item
+                        input.form__input(type="email" name="PROPERTY[EMAIL]" placeholder="E-mail")
+                    .form__item
+                        input.form__input(type="tel" name="PROPERTY[PHONE]" placeholder="Телефон *" required)
+                    .form__item
+                        textarea.form__input(name="PROPERTY[QUESTION]" placeholder="Введите сообщение")
+                    .form__item.form__item_file
+                        input#inputFile(type="file" name="PROPERTY[FILE]")
+                        label(for="inputFile") Загрузка файла
 
                     .form__actions
                         button.btn.btn_main.btn_accent-2(value="Заказать" type="submit") Отправить
