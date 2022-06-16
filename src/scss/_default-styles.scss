@@ -1924,6 +1924,9 @@ b, strong {
     border-radius: 14px;
     max-width: calc(100% - 30px);
     padding: 0;
+    @media screen and (max-width: 767px) {
+      overflow-y: auto;
+    }
   }
 
 
@@ -1931,8 +1934,9 @@ b, strong {
     padding: 36px 48px;
     border-bottom: 1px solid #DEDEDE;
 
+
     @media screen and (max-width: 500px) {
-      padding: 16px;
+      padding: 26px 16px 16px;
       position: relative;
     }
   }
@@ -1941,6 +1945,10 @@ b, strong {
     font-weight: 700;
     font-size: 30px;
     text-align: center;
+
+    @media screen and (max-width: 767px) {
+      font-size: 22px;
+    }
 
     @media screen and (max-width: 500px) {
       font-size: 20px;
@@ -1969,6 +1977,11 @@ b, strong {
 
     &:hover {
       opacity: .6;
+    }
+
+    @media screen and (max-width: 767px) {
+      top: 5px;
+      right: 7px;
     }
   }
 
