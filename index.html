@@ -15,7 +15,7 @@
     <!-- - vendorScripts.push(['js/vendor/imask.js', 'defer']);--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="css/main.css?1655316708531" rel="stylesheet">
+    <link href="css/main.css?1655361159658" rel="stylesheet">
     <title>KAMI saw</title>
   </head>
   <body class="front">
@@ -399,7 +399,7 @@
         </div>
       </section>
     </template>
-    <section class="modal modal_wide" id="selection">
+    <section class="modal" id="selection">
       <div class="modal__body">
         <div class="modal__header">
           <div class="modal__title">Подбор пильного диска</div>
@@ -407,34 +407,22 @@
         </div>
         <div class="modal__content">
           <form class="form form_modal form_selection" action="/ajax/" method="post" data-modal-title="Подбор пильного диска" data-success="gtag('event', 'Callback', { 'event_category': 'event'  });;ym(8743,'reachGoal','callback');">
-            <fieldset class="form__column">
-              <div class="form__item">
-                <input class="form__input" type="text" name="PROPERTY[NAME]" placeholder="Ваше имя *" autocomplete="off" required="required"/>
-              </div>
-              <div class="form__item">
-                <input class="form__input" type="email" name="PROPERTY[EMAIL]" placeholder="E-mail"/>
-              </div>
-              <div class="form__item">
-                <input class="form__input" type="tel" name="PROPERTY[PHONE]" placeholder="Телефон *" required="required"/>
-              </div>
-              <div class="form__item">
-                <textarea class="form__input" name="PROPERTY[QUESTION]" placeholder="Введите сообщение"></textarea>
-              </div>
-            </fieldset>
-            <fieldset class="form__column">
-              <div class="form__item form__item_label">
-                <label class="form__label" for="inputTeeth">Кол-во зубьев</label>
-                <input class="form__input" id="inputTeeth" type="number" name="PROPERTY[TEETH]" placeholder="Кол-во зубьев"/>
-              </div>
-              <div class="form__item form__item_label">
-                <label class="form__label" for="inputRad"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAbCAYAAAB4Kn/lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJtSURBVHgBrVXtceIwEJUNBbiDcyo4UsGRDpwGwK7gSAWYCi4dGBj+h1SQUME5FZyvA+c3A+Q9s+vIjo2dGXbGllZaPT3th+SYK0mSJJ7ruk/H43ERRdHr0FxJABqjGaP10d4MO1jQ8OfpdBrpmOM4GVjtyErHVqsVQX/jyzF3V9i1AIYApOHowr4ZvhhAb7D9K2PhdDpdfQEGoA+jhEeSoRxsl2CZqg3ZQw/Q9WsbxQBdqDKsgb7IghzfTHevCcce5FSJDoJ5xdYtO5+gKYxuW0CNZe/X9BdmRgVYnE9DBuYegckugZItmrkwZbDoKn8wGMxLYLrANuoBSpf9ETVmdpAMFfh/JngF47EMbnuAeuIyD/aPGiyuo14Auu5U2nMHkV6aDsFRydTHR6CFPQf9WbqBMi5yFcf5fwmUccDi0EgRgGVeM9GULPAcLDixg2M5baBwwUiLQIK7bdn8nzkH0XdNh0iwnkSN20BFinTb7/fvBM6obDabH02WAurDDa92ZTUQ8BSYbnK1XA+HQ2C+Hi02Z58xWJG5LGP+SKAgBMBnGQhqDGbmG/kNv1ayi66gz3IMjAEWCCj9qlU065HfgRBjxuyKDZSdVBMn7uVyoV8fwzB86AC1L6/yhitTDP5coplaazIY3XSAjjS4+FLY3+pcmW5gSp9mqjOoWvcNgB4DW7sR72wbxzIOrHy1JZXnKJcNmSXly0J3sbzrlag+rviJlzYA5vJSeA2b8WVJ+YBOJpNdw/z5BVFQAG1hqEXAvI3W6/UvgPglE7BHir413BUV4V3B644PZ9YnX/uKC7DMfN5Ymbmm2G/VteQD4cBqWiTu3ugAAAAASUVORK5CYII=" width="21px"/></label>
-                <input class="form__input" id="inputRad" type="number" name="PROPERTY[RADIUS]" placeholder="Радиус"/>
-              </div>
-              <div class="form__item form__item_file">
-                <input id="inputFile" type="file" name="PROPERTY[FILE]"/>
-                <label for="inputFile">Загрузка файла</label>
-              </div>
-            </fieldset>
+            <div class="form__item">
+              <input class="form__input" type="text" name="PROPERTY[NAME]" placeholder="Ваше имя *" autocomplete="off" required="required"/>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="email" name="PROPERTY[EMAIL]" placeholder="E-mail"/>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="tel" name="PROPERTY[PHONE]" placeholder="Телефон *" required="required"/>
+            </div>
+            <div class="form__item">
+              <textarea class="form__input" name="PROPERTY[QUESTION]" placeholder="Введите сообщение"></textarea>
+            </div>
+            <div class="form__item form__item_file">
+              <input id="inputFile" type="file" name="PROPERTY[FILE]"/>
+              <label for="inputFile">Загрузка файла</label>
+            </div>
             <div class="form__actions">
               <button class="btn btn_main btn_accent-2" value="Заказать" type="submit">Отправить</button>
               <div class="form__item form__item_checkbox">
@@ -548,7 +536,7 @@
         </div>
       </div>
     </section>
-    <script src="js/mainBundle.js?1655316708531" defer="defer"></script>
-    <script src="js/vendor/demo.js?1655316708531" defer="defer"></script>
+    <script src="js/mainBundle.js?1655361159658" defer="defer"></script>
+    <script src="js/vendor/demo.js?1655361159658" defer="defer"></script>
   </body>
 </html>
