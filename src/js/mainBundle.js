@@ -135,4 +135,33 @@ window.addEventListener('load', () => {
         bindForm(form);
     }
 
+
+
+    const elemInViewport = (elem, full) => {
+        const box = elem.getBoundingClientRect(),
+        top = box.top,
+        left = box.left,
+        bottom = box.bottom,
+        right  = box.right,
+        width = document.documentElement.clientWidth,
+        height = document.documentElement.clientHeight,
+        maxWidth = full ? right - left : 0,
+        maxHeight = full ? bottom - top : 0;
+
+        return Math.min(height, bottom)- Math.max(0,top) >= maxHeight && Math.min(width, right)- Math.max(0, left)>= maxWidth;
+    }
+
+    const aboutGoodsImg = document.querySelector('.about-goods__img');
+    const questionBlock = document.querySelector('.questions-block');
+
+    window.addEventListener('scroll', () => {
+        if (elemInViewport(aboutGoodsImg, false)) {
+            aboutGoodsImg.classList.remove('about-goods__img_hidden');
+        }
+
+        if (elemInViewport(questionBlock, true)) {
+            questionBlock.classList.add('questions-block_show-img');
+        }
+    })
+
 })

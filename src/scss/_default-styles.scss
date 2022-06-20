@@ -232,8 +232,9 @@ b, strong {
     left: 0;
     background-color: transparent;
     background-repeat: no-repeat;
-    background-position: 0 100%;
+    background-position: 0 406/16+em;
     background-size: contain;
+    transition: background-position .85s;
 
     @media screen and (min-width: 731px) {
       background-image: url(../img/img_question.png);
@@ -253,6 +254,7 @@ b, strong {
     @media screen and (max-width: 730px) {
       content: none;
     }
+
     @media screen and (max-width: 550px) and (min-width: 415px) {
       content: '';
       background-image: url(../img/img_question.png);
@@ -262,8 +264,15 @@ b, strong {
       right: auto;
       left: 0;
     }
+
     @media screen and (max-width: 414px) {
       content: none;
+    }
+  }
+
+  &_show-img {
+    &::before {
+      background-position: 0 100%;
     }
   }
 }
@@ -311,7 +320,8 @@ b, strong {
   clip-path: ellipse(58% 100% at 50% 100%);
 
   @media screen and (min-width: 551px) {
-    background-image: url(../img/bg_title-block.jpg);
+    //background-image: url(../img/bg_title-block.jpg);
+    background-image: url(../img/bg_head-clear.jpg);
   }
 
   @media screen and (max-width: 1600px) {
@@ -327,6 +337,7 @@ b, strong {
   @media screen and (max-width: 900px) {
     font-size: 13px;
   }
+
   @media screen and (max-width: 767px) {
     clip-path: ellipse(650px 100% at 50% 100%);
   }
@@ -343,46 +354,136 @@ b, strong {
   &::before {
     content: '';
     z-index: 1;
-    position: absolute;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
     display: block;
+    width: 2100px;
+    height: 2100px;
+    position: absolute;
     top: 0;
     left: 50%;
-    background-image: url(../img/img-front-title-top.png), url(../img/title-round-bg.svg);
-    background-position: 50% -90px, 50% 100%;
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto 260px, cover;
-    height: 400/16+em;
-    width: 1144/16+em;
-    transform: translateX(-50%);
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -62%);
+    animation: headBigSaw 40.5s linear infinite;
 
-    @media screen and (max-width: 1600px) {
-      top: -5.5em;
+    @media screen and (min-width: 768px) {
+      background-image: url(../img/head-big-saw.png);
     }
 
-    @media screen and (max-width: 1000px) {
-      background-position: 50% -70px, 50% 100%;
+    @media screen and (max-width: 1600px) {
+      top: -150px;
     }
 
     @media screen and (max-width: 900px) {
-      background-position: 50% -100px, 50% 100%;
+      width: 1500px;
+      height: 1500px;
+      top: -40px;
     }
 
     @media screen and (max-width: 767px) {
-      top: -8em;
-      background-position: 50% -70px, 50% 100%;
+      background-image: url(../img/head-big-saw_medium.png);
+      width: 1100px;
+      height: 1100px;
+      top: -50px;
     }
 
     @media screen and (max-width: 550px) {
-      background-image: url(../img/img_front-title-mobile.png);
-      background-position: 50% 100%;
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      top: 0;
-      height: 14em;
-      width: 40em;
+      width: 800px;
+      height: 800px;
+      top: 15px;
+      left: 47.5%;
     }
   }
 
+  @keyframes headBigSaw {
+    0% {
+      transform: translate(-50%, -62%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -62%) rotate(360deg);
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 4;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -82%);
+
+    width: 850px;
+    height: 850px;
+
+    animation: headSmallSaw 15.5s linear reverse infinite;
+
+    @media screen and (min-width: 768px) {
+      background-image: url(../img/head-small-saw.png);
+    }
+
+    @media screen and (max-width: 1600px) {
+      top: -50px;
+    }
+
+    @media screen and (max-width: 900px) {
+      top: -70px;
+    }
+
+    @media screen and (max-width: 767px) {
+      background-image: url(../img/head-small-saw_medium.png);
+      width: 400px;
+      height: 400px;
+      top: 0;
+    }
+  }
+
+  @keyframes headSmallSaw {
+    0% {
+      transform: translate(-50%, -82%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -82%) rotate(360deg);
+    }
+  }
+
+
+
+  &__title-bg {
+    content: '';
+    z-index: 4;
+    position: absolute;
+    display: block;
+    background-image: url(../img/title-round-bg.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    height: 400px;
+    width: 1144px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+
+    @media screen and (max-width: 1600px) {
+      top: -90px;
+    }
+
+    @media screen and (max-width: 900px) {
+      top: -140px;
+    }
+
+    @media screen and (max-width: 767px) {
+      top: -180px;
+    }
+
+    @media screen and (max-width: 550px) {
+      top: -210px;
+    }
+  }
 
   h1 {
     color: #ffffff;
@@ -392,7 +493,7 @@ b, strong {
     line-height: 1.1;
     margin-bottom: .25em;
     position: relative;
-    z-index: 3;
+    z-index: 5;
 
     b {
       display: block;
@@ -403,6 +504,7 @@ b, strong {
     @media screen and (max-width: 767px) {
       font-size: 1.75em;
     }
+
     @media screen and (max-width: 550px) {
       font-size: 1.5em;
     }
@@ -421,6 +523,8 @@ b, strong {
     margin-right: auto;
     padding-top: 8em;
     padding-bottom: 54/16+em;
+    position: relative;
+    z-index: 3;
 
     @media screen and (max-width: 767px) {
       padding-top: 5.5em;
@@ -1088,6 +1192,16 @@ b, strong {
     margin-right: 26px;
     flex-shrink: 0;
     align-self: center;
+    transition: all 1.5s .15s;
+
+    @media screen and (max-width: 767px) {
+      transition: all .85s;
+    }
+
+    &_hidden {
+      opacity: 0;
+      transform: translateY(30%);
+    }
 
     @media screen and (max-width: 1500px) {
       width: 30%;
