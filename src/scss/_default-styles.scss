@@ -1087,6 +1087,7 @@ b, strong {
       margin-bottom: 30/16+em;
       padding-right: 90/16+em;
       position: relative;
+      transition: all 2s .45s;
 
       @media screen and (max-width: 1100px) {
         padding-left: 50px;
@@ -1184,6 +1185,13 @@ b, strong {
         font-weight: 500;
         color: #A1A1A1;
       }
+
+      @media screen and (min-width: 1101px) {
+        &_hidden {
+          opacity: 0;
+          transform: translateY(20%);
+        }
+      }
     }
   }
 
@@ -1248,6 +1256,14 @@ b, strong {
     padding-right: 28/16+em;
     flex-basis: 400/16+em;
     flex-shrink: 0;
+    transition: all 1.5s .15s;
+
+    @media screen and (min-width: 1101px) {
+      &_hidden {
+        opacity: 0;
+        transform: translateY(20%);
+      }
+    }
 
     @media screen and (max-width: 1100px) {
       flex-basis: 30em;

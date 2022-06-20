@@ -151,17 +151,44 @@ window.addEventListener('load', () => {
         return Math.min(height, bottom)- Math.max(0,top) >= maxHeight && Math.min(width, right)- Math.max(0, left)>= maxWidth;
     }
 
-    const aboutGoodsImg = document.querySelector('.about-goods__img');
-    const questionBlock = document.querySelector('.questions-block');
+    const animateImages = () => {
+        const aboutGoodsImg = document.querySelector('.about-goods__img');
+        const aboutGoodsItems = document.querySelectorAll('.about-goods__list-item');
+        const aboutGoodsSum = document.querySelector('.about-goods__sum');
+        const questionBlock = document.querySelector('.questions-block');
 
-    window.addEventListener('scroll', () => {
-        if (elemInViewport(aboutGoodsImg, false)) {
-            aboutGoodsImg.classList.remove('about-goods__img_hidden');
+        if (!aboutGoodsImg && !questionBlock && !aboutGoodsItems.length && aboutGoodsSum) {
+            return false;
         }
 
-        if (elemInViewport(questionBlock, true)) {
-            questionBlock.classList.add('questions-block_show-img');
+        aboutGoodsImg && aboutGoodsImg.classList.add('about-goods__img_hidden');
+        aboutGoodsSum && aboutGoodsSum.classList.add('about-goods__sum_hidden');
+        for (const item of aboutGoodsItems) {
+            item.classList.add('about-goods__list-item_hidden')
         }
-    })
+
+        window.addEventListener('scroll', () => {
+            if (aboutGoodsImg && elemInViewport(aboutGoodsImg, false)) {
+                aboutGoodsImg.classList.remove('about-goods__img_hidden');
+            }
+
+            if (questionBlock && elemInViewport(questionBlock, true)) {
+                questionBlock.classList.add('questions-block_show-img');
+            }
+
+            if (aboutGoodsSum && elemInViewport(aboutGoodsSum, true)) {
+                aboutGoodsSum.classList.remove('about-goods__sum_hidden');
+            }
+
+            for (const item of aboutGoodsItems) {
+                if (elemInViewport(item, true)) {
+                    item.classList.remove('about-goods__list-item_hidden');
+                }
+            }
+
+        })
+    }
+
+    animateImages();
 
 })
